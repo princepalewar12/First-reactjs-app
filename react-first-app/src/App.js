@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/header';
+// import Footer from './components/footer';
+// import TestClassComponent from './components/ComponentDetail/classComp'
+// import FunctionalComp from './components/ComponentDetail/functionalComp';
+import ColorSchemesExample from './components/navBar';
+import JsxComp from './JsxDetalis/JsxComp';
+import FragmtComp from './JsxDetalis/fragmt';
+import { Home } from './components/ReactRouting/home';
+import Website from './components/ReactRouting/website';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        {/* <ColorSchemesExample/> */}
+        {/* <Header /> */}
+        <div className='App'>
+          {/* <h3>This is the main heading</h3> */}
+          {/* <TestClassComponent /> */}
+          {/* <FunctionalComp/> */}
+          {/* <JsxComp/> */}
+          {/* <FragmtComp/> */}
+          <Website/>
+        </div>
+
+      </div>
     </div>
   );
 }
