@@ -14,9 +14,18 @@ import ReactComp from "./reactComp";
 import JsComp from "./jsComp";
 import CssComp from "./cssComp";
 import HtmlComp from "./htmlComp";
+import ClassComp from "../compCommunication/ClassComp";
+import FuncComp from "../compCommunication/FuncComp";
+import StateInClassComp from "../stateInComp/StateInClassComp";
 
 
 const Website = () => {
+    let pName = "PRINCE";
+    const employee = {
+        name: "Prince",
+        age: 26,
+        address: "Nagpur"
+    }
     return (
         <>
             <Router>
@@ -44,6 +53,15 @@ const Website = () => {
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/contact">Contact US</NavLink>
                                 </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/compCommunication">Comp Communication</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/functionComponent">Function Communication</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/stateInClassComp">StateInClassComp</NavLink>
+                                </li>
                             </ul>
                             <div className="d-flex">
                             <ul className="navbar-nav me-auto mb-1 mb-lg-0">
@@ -69,6 +87,10 @@ const Website = () => {
                     <Route exact path="/" element={<Home />}></Route>
                     <Route exact path="/contact" element={<Contacts />}></Route>
                     <Route exact path="/Services" element={<Services />}></Route>
+                    <Route exact path="/compCommunication" element={<ClassComp myName = {pName} company="ADOBE" employeeObj={employee}/>}></Route>
+                    <Route exact path="/functionComponent" element={<FuncComp myName = {pName} company="ADOBE" employeeObj={employee}/>}></Route>
+                    <Route exact path="/stateInClassComp" element={<StateInClassComp myName = {pName} company="ADOBE" employeeObj={employee}/>}></Route>
+                   
                     <Route exact path="/reactjs" element={<ReactComp/>}></Route>
                     <Route exact path="/javascript" element={<JsComp/>}></Route>
                     <Route exact path="/css" element={<CssComp/>}></Route>
