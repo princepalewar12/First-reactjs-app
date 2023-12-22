@@ -17,6 +17,8 @@ import HtmlComp from "./htmlComp";
 import ClassComp from "../compCommunication/ClassComp";
 import FuncComp from "../compCommunication/FuncComp";
 import StateInClassComp from "../stateInComp/StateInClassComp";
+import UseStateHook from "../stateInComp/UseStateHook";
+import  ConditionalRendComp  from "../condRenderingOfComp/ConditionalRendComp";
 
 
 const Website = () => {
@@ -62,6 +64,12 @@ const Website = () => {
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/stateInClassComp">StateInClassComp</NavLink>
                                 </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/stateInFunComp">StateInFunComp</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/conditionalRendComp">ConditionalRendComp</NavLink>
+                                </li>
                             </ul>
                             <div className="d-flex">
                             <ul className="navbar-nav me-auto mb-1 mb-lg-0">
@@ -90,6 +98,8 @@ const Website = () => {
                     <Route exact path="/compCommunication" element={<ClassComp myName = {pName} company="ADOBE" employeeObj={employee}/>}></Route>
                     <Route exact path="/functionComponent" element={<FuncComp myName = {pName} company="ADOBE" employeeObj={employee}/>}></Route>
                     <Route exact path="/stateInClassComp" element={<StateInClassComp myName = {pName} company="ADOBE" employeeObj={employee}/>}></Route>
+                    <Route exact path="/stateInFunComp" element={<UseStateHook/>}></Route>
+                    <Route exact path="/conditionalRendComp" element={<ConditionalRendComp/>}></Route>
                    
                     <Route exact path="/reactjs" element={<ReactComp/>}></Route>
                     <Route exact path="/javascript" element={<JsComp/>}></Route>
