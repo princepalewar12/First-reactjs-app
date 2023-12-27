@@ -10,6 +10,7 @@ import FragmtComp from './JsxDetalis/fragmt';
 import { Home } from './components/ReactRouting/home';
 import Website from './components/ReactRouting/website';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ClassCompLifeCycle from './components/compLifeCycle.js/classCompLifeCycle';
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
           {/* <JsxComp/> */}
           {/* <FragmtComp/> */}
           <Website/>
+          <ClassCompLifeCycle/>
         </div>
 
       </div>

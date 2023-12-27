@@ -28,7 +28,6 @@ class EventHandling extends Component{
 
                 {/* EventHanling using arrow function */}
                 <Button variant='primary' onClick={this.changeName.bind(this)}>CLICK!</Button>
-                
             </>
         )
     }
