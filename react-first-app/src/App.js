@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/header';
+// import Header from './components/header';
 // import Footer from './components/footer';
 // import TestClassComponent from './components/ComponentDetail/classComp'
 // import FunctionalComp from './components/ComponentDetail/functionalComp';
@@ -11,6 +11,7 @@ import { Home } from './components/ReactRouting/home';
 import Website from './components/ReactRouting/website';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClassCompLifeCycle from './components/compLifeCycle.js/classCompLifeCycle';
+import ApiIntegration from './components/apiIntegration/ApiIntegration';
 function App() {
   return (
     <div>
@@ -23,8 +24,10 @@ function App() {
           {/* <FunctionalComp/> */}
           {/* <JsxComp/> */}
           {/* <FragmtComp/> */}
+
           <Website/>
-          <ClassCompLifeCycle/>
+          {/* <ClassCompLifeCycle/> */}
+          {/* <ApiIntegration/> */}
         </div>
 
       </div>
