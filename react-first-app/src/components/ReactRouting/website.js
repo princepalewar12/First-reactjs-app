@@ -5,10 +5,9 @@ import {
   NavLink,
 } from "react-router-dom";
 // import { Home } from "./home";
-import { Contacts } from "./contacts";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Services from "./Services";
+// import Services from "./Services";
 // import Container from 'react-bootstrap/Container';
 import Nav from "react-bootstrap/Nav";
 // import Navbar from 'react-bootstrap/Navbar';
@@ -17,7 +16,6 @@ import Home from "./home";
 import logo from "./photo/logo.jpg";
 import ReactComp from "./reactComp";
 import JsComp from "./jsComp";
-import CssComp from "./cssComp";
 import HtmlComp from "./htmlComp";
 import ClassComp from "../compCommunication/ClassComp";
 import FuncComp from "../compCommunication/FuncComp";
@@ -26,6 +24,10 @@ import UseStateHook from "../stateInComp/UseStateHook";
 import ConditionalRendComp from "../condRenderingOfComp/ConditionalRendComp";
 import StylingComp from "../condRenderingOfComp/StylingComp";
 import EventHandling from "../condRenderingOfComp/EventHandling";
+import { UserDataApi } from "./UserDataApi";
+import ProductPage from "./ProductPage";
+import MenuBar from "../MenuBar";
+import UserCommentsUseEffect from "./UserCommentsUseEffect";
 
 const Website = () => {
   let pName = "PRINCE";
@@ -63,14 +65,14 @@ const Website = () => {
                   <NavLink
                     className="nav-link active"
                     aria-current="page"
-                    to="/Services"
+                    to="/products"
                   >
-                    Services
+                    Products Page
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/contact">
-                    Contact US
+                  <NavLink className="nav-link" to="/userdataapi">
+                    User Data
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -126,25 +128,28 @@ const Website = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/css">
-                      CSS
+                    <NavLink className="nav-link" to="/usercomments">
+                      Comments
                     </NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/html">
                       HTML
                     </NavLink>
+
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </nav>
+        <MenuBar />
+
 
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/contact" element={<Contacts />}></Route>
-          <Route exact path="/Services" element={<Services />}></Route>
+          <Route exact path="/userdataapi" element={<UserDataApi />}></Route>
+          <Route exact path="/products" element={<ProductPage />}></Route>
           <Route
             exact
             path="/compCommunication"
@@ -177,7 +182,7 @@ const Website = () => {
           <Route
             exact
             path="/stateInFunComp"
-            element={<UseStateHook />}
+            element={<UseStateHook />} 
           ></Route>
           <Route
             exact
@@ -197,7 +202,7 @@ const Website = () => {
 
           <Route exact path="/reactjs" element={<ReactComp />}></Route>
           <Route exact path="/javascript" element={<JsComp />}></Route>
-          <Route exact path="/css" element={<CssComp />}></Route>
+          <Route exact path="/usercomments" element={<UserCommentsUseEffect />}></Route>
           <Route exact path="/html" element={<HtmlComp />}></Route>
         </Routes>
       </Router>

@@ -1,4 +1,6 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ReactComp() {
   return (
@@ -6,7 +8,7 @@ function ReactComp() {
       <div class="d-inline-flex p-2">
         <div class="col-2">
           <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
-            <nav class="nav nav-pills flex-column">
+            <nav class="nav nav-pills flex-row">
               <a class="nav-link" href="#item-1">React Intro</a>
               <nav class="nav nav-pills flex-column">
                 <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
@@ -39,7 +41,7 @@ function ReactComp() {
         </div>
       </div>
 
-      {/* <div class="col-8">
+      <div class="col-8">
           <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
             <div id="item-1">
               <h3>React Introduction</h3>
@@ -71,7 +73,7 @@ function ReactComp() {
               <p>...</p>
             </div>
           </div>
-        </div> */}
+        </div>
 
     </>
   )
