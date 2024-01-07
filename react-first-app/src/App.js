@@ -12,6 +12,10 @@ import Website from './components/ReactRouting/website';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClassCompLifeCycle from './components/compLifeCycle.js/classCompLifeCycle';
 import ApiIntegration from './components/apiIntegration/ApiIntegration';
+import PureComp from './components/pureComp&ChildComm/PureComp';
+import ParentComp from './components/pureComp&ChildComm/ParentComp';
+import FunctionChild from './components/pureComp&ChildComm/FunctionChild';
+import FunctionParent from './components/pureComp&ChildComm/FunctionParent';
 function App() {
   return (
     <div>
@@ -25,9 +29,15 @@ function App() {
           {/* <JsxComp/> */}
           {/* <FragmtComp/> */}
 
-          <Website/>
+          {/* <Website/> */}
+
           {/* <ClassCompLifeCycle/> */}
           {/* <ApiIntegration/> */}
+
+          {/* <PureComp/> */}
+          <ParentComp/>
+          <br />
+          <FunctionParent/>
         </div>
 
       </div>
