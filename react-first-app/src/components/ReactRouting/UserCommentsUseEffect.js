@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
 
-const UserCommentsUseEffect = (props) => {
+const UserCommentsUseEffect = () => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -15,37 +16,37 @@ const UserCommentsUseEffect = (props) => {
         console.log(error);
       }
       console.log(userComments.data);
-      setComments({ Comments: userComments.data });
+      setComments(userComments.data );
     };
     getCommentData();
   }, []);
 
   return (
     <>
-      <div>UserCommentsUseEffect</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Body</th>
-          </tr>
-        </thead>
-        <tbody>
-          {comments.map((comments) => {
-            <div>
-              <tr key={comments.postId}>
-                <td>{comments.id}</td>
-                <td>{comments.name}</td>
-                <td>{comments.email}</td>
-                <td>{comments.body}</td>
+      <div className="container">
+          <h1>Calling API using useEffect Hook</h1>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Body</th>
+              
               </tr>
-            </div>;
-          })}
-        </tbody>
-      </table>
-    </>
+            </thead>
+            <tbody>
+            {comments.map((userComments) => 
+              <tr key={userComments.id}>
+                <td>{userComments.name}</td>
+                <td>{userComments.email}</td>
+                <td>{userComments.body}</td>
+      
+              </tr>
+                    // <p>{user.username}-{user.password}</p>
+                )}
+            </tbody>
+          </Table>
+        </div>    </>
   );
 };
 

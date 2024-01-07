@@ -28,9 +28,9 @@ export default class ProductPage extends Component {
         <div>Product page</div>
         {this.state.products.map((products) => (
           // <p>{products.username}-{products.password}</p>
-         <div className="product-list" style={{display:"inline-block",alignItems: "center"}}>
+         <div className="product-list" style={{display: "inline-flex", flexWrap: "nowrap" }}>
            <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={products.image} />
+            <Card.Img variant="top" style={{width:"286px", height:"180px"}}src={products.image} />
             <Card.Body>
               <Card.Title>{products.title}</Card.Title>
               <Card.Text>Price:{products.price}</Card.Text>

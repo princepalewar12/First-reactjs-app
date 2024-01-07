@@ -16,7 +16,6 @@ import Home from "./home";
 import logo from "./photo/logo.jpg";
 import ReactComp from "./reactComp";
 import JsComp from "./jsComp";
-import HtmlComp from "./htmlComp";
 import ClassComp from "../compCommunication/ClassComp";
 import FuncComp from "../compCommunication/FuncComp";
 import StateInClassComp from "../stateInComp/StateInClassComp";
@@ -28,6 +27,7 @@ import { UserDataApi } from "./UserDataApi";
 import ProductPage from "./ProductPage";
 import MenuBar from "../MenuBar";
 import UserCommentsUseEffect from "./UserCommentsUseEffect";
+import CartProduct from "./CartProduct";
 
 const Website = () => {
   let pName = "PRINCE";
@@ -133,8 +133,8 @@ const Website = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/html">
-                      HTML
+                    <NavLink className="nav-link" to="/cartproducts">
+                      Cart Products
                     </NavLink>
 
                   </li>
@@ -203,7 +203,7 @@ const Website = () => {
           <Route exact path="/reactjs" element={<ReactComp />}></Route>
           <Route exact path="/javascript" element={<JsComp />}></Route>
           <Route exact path="/usercomments" element={<UserCommentsUseEffect />}></Route>
-          <Route exact path="/html" element={<HtmlComp />}></Route>
+          <Route exact path="/cartproducts" element={<CartProduct />}></Route>
         </Routes>
       </Router>
     </>
