@@ -16,6 +16,11 @@ import PureComp from './components/pureComp&ChildComm/PureComp';
 import ParentComp from './components/pureComp&ChildComm/ParentComp';
 import FunctionChild from './components/pureComp&ChildComm/FunctionChild';
 import FunctionParent from './components/pureComp&ChildComm/FunctionParent';
+import FormBasics from './components/formHandling/FormBasics';
+import AdvanceForm from './components/formHandling/AdvanceForm';
+import ReactBootstrapAdvFrom from './components/formHandling/ReactBootstrapAdvFrom';
+import ClassCompForm from './components/formHandling/ClassCompForm';
+import ParentCompDrilling from './components/propDrilling/ParentCompDrilling';
 function App() {
   return (
     <div>
@@ -35,9 +40,13 @@ function App() {
           {/* <ApiIntegration/> */}
 
           {/* <PureComp/> */}
-          <ParentComp/>
-          <br />
-          <FunctionParent/>
+          {/* <ParentComp/> */}
+          {/* <FunctionParent/> */}
+          {/* <FormBasics/> */}
+          {/* <AdvanceForm/> */}
+          {/* <ReactBootstrapAdvFrom/> */}
+          {/* <ClassCompForm/> */}
+          <ParentCompDrilling/>
         </div>
 
       </div>
