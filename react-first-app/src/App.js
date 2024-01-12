@@ -26,6 +26,7 @@ import ClassParent from "./components/ContextInClassComp/ClassParent";
 import ErrorBoundries from "./components/ErrorBoundries/ErrorBoundries";
 import Counter from "./components/ErrorBoundries/Counter";
 import ErrorBoundaries from "./components/ErrorBoundries/ErrorBoundries";
+import MemoParent from "./components/Memo/MemoParent";
 function App() {
   return (
     <div>
@@ -54,10 +55,10 @@ function App() {
           {/* <ParentCompDrilling/> */}
           {/* <ParentUseContext/> */}
           {/* <ClassParent/> */}
-          <h2>Your App Content</h2>
-          <ErrorBoundaries>
+          {/* <ErrorBoundaries>
             <Counter />
-          </ErrorBoundaries>
+          </ErrorBoundaries> */}
+          <MemoParent/>
         </div>
       </div>
     </div>
