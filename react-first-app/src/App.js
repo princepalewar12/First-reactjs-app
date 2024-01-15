@@ -27,6 +27,8 @@ import ErrorBoundries from "./components/ErrorBoundries/ErrorBoundries";
 import Counter from "./components/ErrorBoundries/Counter";
 import ErrorBoundaries from "./components/ErrorBoundries/ErrorBoundries";
 import MemoParent from "./components/Memo/MemoParent";
+import ParentCompUseMemo from "./components/Memo/ParentCompUseMemo";
+import UseReducedHook from "./components/useReduceHook/UseReducedHook";
 function App() {
   return (
     <div>
@@ -58,7 +60,9 @@ function App() {
           {/* <ErrorBoundaries>
             <Counter />
           </ErrorBoundaries> */}
-          <MemoParent/>
+          {/* <MemoParent/> */}
+          {/* <ParentCompUseMemo/> */}
+          <UseReducedHook/>
         </div>
       </div>
     </div>
