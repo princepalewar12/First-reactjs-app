@@ -30,6 +30,9 @@ import MemoParent from "./components/Memo/MemoParent";
 import ParentCompUseMemo from "./components/Memo/ParentCompUseMemo";
 import UseReducedHook from "./components/useReduceHook/UseReducedHook";
 import UseCallBackHook from "./useCallBackHook/UseCallBackHook";
+import ControlledComp from "./components/ControlledComp&UncontrolledComp/ControlledComp";
+import UncontrolledComp from "./components/ControlledComp&UncontrolledComp/UncontrolledComp";
+
 function App() {
   return (
     <div>
@@ -64,7 +67,9 @@ function App() {
           {/* <MemoParent/> */}
           {/* <ParentCompUseMemo/> */}
           {/* <UseReducedHook/> */}
-          <UseCallBackHook/>
+          {/* <UseCallBackHook/> */}
+          {/* <ControlledComp/> */}
+          <UncontrolledComp/>
         </div>
       </div>
     </div>
