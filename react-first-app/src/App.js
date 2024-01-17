@@ -32,6 +32,7 @@ import UseReducedHook from "./components/useReduceHook/UseReducedHook";
 import UseCallBackHook from "./useCallBackHook/UseCallBackHook";
 import ControlledComp from "./components/ControlledComp&UncontrolledComp/ControlledComp";
 import UncontrolledComp from "./components/ControlledComp&UncontrolledComp/UncontrolledComp";
+import Charts from "./components/Apex-Chart/ChartsTest";
 
 function App() {
   return (
@@ -69,7 +70,8 @@ function App() {
           {/* <UseReducedHook/> */}
           {/* <UseCallBackHook/> */}
           {/* <ControlledComp/> */}
-          <UncontrolledComp/>
+          {/* <UncontrolledComp/> */}
+          <Charts/>
         </div>
       </div>
     </div>
