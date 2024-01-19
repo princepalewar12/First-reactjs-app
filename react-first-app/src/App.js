@@ -33,7 +33,13 @@ import UseCallBackHook from "./useCallBackHook/UseCallBackHook";
 import ControlledComp from "./components/ControlledComp&UncontrolledComp/ControlledComp";
 import UncontrolledComp from "./components/ControlledComp&UncontrolledComp/UncontrolledComp";
 import Charts from "./components/Apex-Chart/ChartsTest";
+// import react router dom component
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddEmployee from "./components/CRUD_Using_Context_API/AddEmployee";
+import EmployeeList from "./components/CRUD_Using_Context_API/EmployeeList";
+import EditEmployee from "./components/CRUD_Using_Context_API/EditEmployee";
 
+import { EmployeeProvider } from "./components/CRUD_Using_Context_API/EmployeeStore";
 function App() {
   return (
     <div>
@@ -71,7 +77,25 @@ function App() {
           {/* <UseCallBackHook/> */}
           {/* <ControlledComp/> */}
           {/* <UncontrolledComp/> */}
-          <Charts/>
+          {/* <Charts/> */}
+
+          <Router>
+            <EmployeeProvider>
+              <Routes>
+                <Route exact path="/" element={<EmployeeList />}></Route>
+                <Route
+                  exact
+                  path="/addEmployee"
+                  element={<AddEmployee />}
+                ></Route>
+                <Route
+                  exact
+                  path="/editEmployee/:id"
+                  element={<EditEmployee  />}
+                ></Route>
+              </Routes>
+            </EmployeeProvider>
+          </Router>
         </div>
       </div>
     </div>
