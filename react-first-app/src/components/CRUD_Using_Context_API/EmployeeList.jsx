@@ -4,15 +4,25 @@ import './crudStyle.css'
 import Table from 'react-bootstrap/Table'
 
 import { useNavigate } from 'react-router-dom'
-import { EmployeeContext } from './EmployeeStore'
+//import { EmployeeContext } from './EmployeeStore'
+
+import { useSelector } from 'react-redux'
+
+import { deleteEmployee } from './employeeSlice'
+import { useDispatch } from 'react-redux'
 
 const EmployeeList = () => {
     
     const navigate = useNavigate()
-    const{employees, deleteEmployee} = useContext(EmployeeContext)
+    //const{employees, deleteEmployee} = useContext(EmployeeContext)
+    
+    const dispatch = useDispatch()
+
+    const employees = useSelector(state => state.employee.employees)
 
     const handleDelete =(id)=>{
-      deleteEmployee(id)
+      //deleteEmployee(id)
+      dispatch(deleteEmployee(id))
     }
   return (
     <div>

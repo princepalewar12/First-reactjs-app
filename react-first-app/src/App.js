@@ -35,11 +35,11 @@ import UncontrolledComp from "./components/ControlledComp&UncontrolledComp/Uncon
 import Charts from "./components/Apex-Chart/ChartsTest";
 // import react router dom component
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddEmployee from "./components/CRUD_Using_Context_API/AddEmployee";
-import EmployeeList from "./components/CRUD_Using_Context_API/EmployeeList";
-import EditEmployee from "./components/CRUD_Using_Context_API/EditEmployee";
+import AddEmployee from "./components/CRUD_using_context_api/AddEmployee";
+import EmployeeList from "./components/CRUD_using_context_api/EmployeeList";
+import EditEmployee from "./components/CRUD_using_context_api/EditEmployee";
 
-import { EmployeeProvider } from "./components/CRUD_Using_Context_API/EmployeeStore";
+import { EmployeeProvider } from "./components/CRUD_using_context_api/EmployeeStore";
 function App() {
   return (
     <div>
